@@ -4,23 +4,41 @@
   "description": "A Social Media platform with only one message!",
   "main": "src/server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server/app.js",
-    "nodemon": "nodemon --watch ./src ./src/server/app.js"
+    "webpack": "webpack",
+    "webpackWatch": "webpack watch",
+    "nodemon": "nodemon -e js,html,css --watch ./server --watch ./hosted ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"Tests complete\"",
+    "heroku-postbuild": "webpack"
   },
   "author": "Jackson Majewski",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "compression": "^1.7.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
     "mongoose": "^8.8.1",
+    "redis": "^4.7.0",
     "serve-favicon": "^2.5.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "underscore": "^1.13.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
   }
 }
