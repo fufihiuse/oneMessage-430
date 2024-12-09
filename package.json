@@ -1,0 +1,26 @@
+{
+  "name": "onemessage",
+  "version": "1.0.0",
+  "description": "A Social Media platform with only one message!",
+  "main": "src/server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server/app.js",
+    "nodemon": "nodemon --watch ./src ./src/server/app.js"
+  },
+  "author": "Jackson Majewski",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.8.1",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
